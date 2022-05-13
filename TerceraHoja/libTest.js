@@ -1,0 +1,14 @@
+"use strict";
+exports.__esModule = true;
+var reto1_1 = require("../PrimeraParte/reto1");
+var lib_1 = require("./lib");
+var movl = new reto1_1.Mobile('Iphone', '13', 'Apple', 12, 'azul', true, 5, 1200);
+var movl1 = new reto1_1.Mobile('Motorola', 'StartAC', 'Motorola', 14, 'gris', false, 1, 15);
+var movl2 = new reto1_1.Mobile('Xiami', 'Redmi Note', 'Xiomi', 12, 'verde', true, 3, 199);
+var movl3 = new reto1_1.Mobile('Samsung', 'A52s', 'Samsung', 14, 'gris', true, 1, 400);
+var mobils = [movl, movl1, movl2, movl3];
+var pruebas = new lib_1.MobileLibrary('nombre', 'lugar', mobils);
+console.log(pruebas.totalPriceCalculation());
+console.log(pruebas.getlocation());
+console.log(pruebas.getmobiles());
+console.log(pruebas.getlocation());
