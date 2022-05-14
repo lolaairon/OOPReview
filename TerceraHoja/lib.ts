@@ -53,7 +53,23 @@ import {Mobile} from "../PrimeraParte/reto1"
             return box
         }
 
+        printLibrary(){
+            
+                return `
+                This is all my mobiles:"\n"
+                The characteristics of the mobile name are: "\n"
+                Name : ${this.name} "\n"
+                Model : ${this.model} "\n"
+                Trademark : ${this.trademark} "\n"
+                SD Size : ${this.sdSize} "\n"
+                Color : ${this.color} "\n"
+                Is a 5G: ${this.is5G} "\n"
+                Numbers of camaras : ${this.cameraNumber} "\n"
+                
+                `
 
+    }
+        }
 
 
 
