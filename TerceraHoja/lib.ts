@@ -11,6 +11,7 @@ import {Mobile} from "../PrimeraParte/reto1"
             this.name = name
             this.location = location
             this.mobiles = mobiles
+            this.totalPrice = this.totalPriceCalculation();
         }
 
         public setname(name:string):void{
@@ -44,7 +45,7 @@ import {Mobile} from "../PrimeraParte/reto1"
             return this.totalPrice
         }
 
-        public totalPriceCalculation(){
+        public totalPriceCalculation():number{
             let box:number= 0
             for(let i = 0; i< this.mobiles.length ; i++){
                box += this.mobiles[i].getprice() 
@@ -53,30 +54,22 @@ import {Mobile} from "../PrimeraParte/reto1"
             return box
         }
 
-        printLibrary(){
+       public printLibrary(){
             
-                return `
-                This is all my mobiles:"\n"
-                The characteristics of the mobile name are: "\n"
-                Name : ${this.name} "\n"
-                Model : ${this.model} "\n"
-                Trademark : ${this.trademark} "\n"
-                SD Size : ${this.sdSize} "\n"
-                Color : ${this.color} "\n"
-                Is a 5G: ${this.is5G} "\n"
-                Numbers of camaras : ${this.cameraNumber} "\n"
-                
-                `
-
+        console.log("This is al my mobiles: " + " \n ");
+            for(let moviles in this.mobiles){
+                this.mobiles[moviles].printAll()
+            }
+            console.log("Price overall " + this.totalPrice + "\n")
+        } 
     }
-        }
 
 
 
 
 
 
-}
+/*
 
 let movil = new Mobile ('nokia','3210','nokia',10,'negro', false, 0, 50);
 let movil1 = new Mobile ('iphone','3G','apple',10,'blanco', true, 1, 150);
@@ -84,4 +77,5 @@ let movil2 = new Mobile ('samsung','Galaxy 10','samsung',12,'azul', true, 2, 350
 let mobiless : Mobile[] = [movil,movil1,movil2]
 let prueba = new MobileLibrary ('nombre','lugar',mobiless)
 
-console.log(prueba.totalPriceCalculation());
+let prb : Mobile[] = [movil,movil1,movil2]
+ */
